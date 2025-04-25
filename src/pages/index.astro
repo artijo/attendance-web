@@ -1,11 +1,76 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Logo from '../assets/nps-logo.webp';
 ---
 
 <Layout>
-	<Welcome />
+  <div class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="max-w-4xl w-full bg-white rounded-lg shadow-lg p-6 md:p-8">
+      <div class="flex justify-center mb-8">
+        <img src={Logo.src} alt="NPS Logo" class="h-24 md:h-32" />
+      </div>
+      
+      <h1 class="text-center text-primary mb-2">ระบบบันทึกและติดตามการเข้าเรียนและกิจกรรมของนักเรียน</h1>
+      <p class="text-center text-text-color-alt mb-8">โรงเรียนน้ำพองศึกษา</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="https://student.att.nps.ac.th" 
+           class="block p-6 bg-background rounded-lg transition-transform transform hover:scale-105 hover:shadow-md border-2 border-line">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+              <img src="/ico/student.svg" alt="Student Icon" class="w-8 h-8" />
+            </div>
+            <h3 class="text-primary mb-2">สำหรับนักเรียน</h3>
+            <p class="text-text-color-alt">ระบบบันทึกและติดตามการเข้าเรียนและกิจกรรม</p>
+          </div>
+        </a>
+        
+        <a href="https://teacher.att.nps.ac.th" 
+           class="block p-6 bg-background rounded-lg transition-transform transform hover:scale-105 hover:shadow-md border-2 border-line">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+              <img src="/ico/teacher.svg" alt="Teacher Icon" class="w-8 h-8" />
+            </div>
+            <h3 class="text-primary mb-2">สำหรับคุณครู</h3>
+            <p class="text-text-color-alt">ระบบบันทึกและติดตามการเข้าเรียนและกิจกรรม</p>
+          </div>
+        </a>
+        
+        <a href="https://manage.att.nps.ac.th" 
+           class="block p-6 bg-background rounded-lg transition-transform transform hover:scale-105 hover:shadow-md border-2 border-line">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+              <img src="/ico/settings.svg" alt="Admin Icon" class="w-8 h-8" />
+            </div>
+            <h3 class="text-primary mb-2">สำหรับผู้ดูแลระบบ</h3>
+            <p class="text-text-color-alt">ระบบบันทึกและติดตามการเข้าเรียนและกิจกรรม</p>
+          </div>
+        </a>
+        
+        <a href="https://liff.line.me/2006049603-5Ne6yzM4" 
+           class="block p-6 bg-background rounded-lg transition-transform transform hover:scale-105 hover:shadow-md border-2 border-line">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="white" viewBox="0 0 24 24">
+                <path d="M19.952 11.121c0-4.632-4.641-8.4-10.348-8.4-5.708 0-10.348 3.768-10.348 8.4 0 4.152 3.684 7.632 8.66 8.292.336.072.795.221.91.507.105.259.069.665.033.924 0 0-.119.719-.145.871-.44.254-.203.996.876.543.216-.92 4.6-2.712 6.278-4.644C18.204 15.159 19.952 13.249 19.952 11.121"/>
+              </svg>
+            </div>
+            <h3 class="text-primary mb-2">สำหรับผู้ปกครอง</h3>
+            <p class="text-text-color-alt">ระบบรับการแจ้งเตือนการเข้าเรียนและกิจกรรม</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="mt-12 text-center text-text-color-alt text-sm">
+        <p>© {new Date().getFullYear()} โรงเรียนน้ำพองศึกษา (Namphongsuksa School)</p>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
